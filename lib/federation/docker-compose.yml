@@ -9,7 +9,7 @@ services:
     labels:
       - "candigv2=federation"
     ports:
-      - "${FEDERATION_PORT}:4232"
+      - "${FEDERATION_PORT}:3000"
     secrets:
       - source: opa-service-token
         target: opa-service-token

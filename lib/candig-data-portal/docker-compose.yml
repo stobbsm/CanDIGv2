@@ -8,7 +8,7 @@ services:
         katsu_api_target_url: "${TYK_KATSU_API_TARGET}"
     image: ${DOCKER_REGISTRY}/candig-data-portal:${CANDIG_DATA_PORTAL_VERSION:-latest}
     ports:
-      - "${CANDIG_DATA_PORTAL_PORT}:2543"
+      - "${CANDIG_DATA_PORTAL_PORT}:3000"
     secrets:
       - source: vault-s3-token
         target: vault-s3-token
@@ -25,7 +25,7 @@ services:
       - REACT_APP_CANDIG_VERSION=${CANDIG_VERSION}
       - WDS_SOCKET_PORT=0
     healthcheck:
-      test: [ "CMD", "curl", "http://${CANDIG_DOMAIN}:5080" ]
+      test: [ "CMD", "curl", "http://localhost:3000"]
       interval: 30s
       timeout: 20s
       retries: 3

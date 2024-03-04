@@ -8,7 +8,7 @@ services:
         labels:
             - "candigv2=candig-ingest"
         ports:
-            - "${CANDIG_INGEST_PORT}:1235"
+            - "${CANDIG_INGEST_PORT}:3000"
         environment:
             KEYCLOAK_PUBLIC_URL: ${KEYCLOAK_PUBLIC_URL}
             KATSU_URL: ${KATSU_PRIVATE_URL}

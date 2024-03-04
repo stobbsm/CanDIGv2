@@ -12,10 +12,10 @@ if [[ $* == *-s* ]]; then
     SILENT_MODE=1
 fi
 
-if [[ ! -z "$CANDIG_HOST" ]] && [[ "$SILENT_MODE" != 1 ]]; then
-    printf "Please disable the UHN VPN, as it causes errors with the build process"
-    exit 1
-fi
+#if [[ ! -z "$CANDIG_HOST" ]] && [[ "$SILENT_MODE" != 1 ]]; then
+#    printf "Please disable the UHN VPN, as it causes errors with the build process"
+#    exit 1
+#fi
 
 # Check 2: The value of CANDIG_DOMAIN can be reached
 if [ -z "$CANDIG_DOMAIN" ]; then
